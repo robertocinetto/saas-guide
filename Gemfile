@@ -33,11 +33,18 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 gem 'devise'
+#permette devise di inviare email in background
+gem 'devise-async'
+gem 'sidekiq'
+
 gem 'slim-rails'
 #awesome print rende l'output in console piú leggibile
 gem 'awesome_print'
 #figaro serve a creare env vars sicure
 gem "figaro"
+
+gem 'puma'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -52,6 +59,8 @@ group :development do
   gem 'spring'
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor', group: :production
+end
 
 
