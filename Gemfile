@@ -36,15 +36,14 @@ gem 'devise'
 #permette devise di inviare email in background
 gem 'devise-async'
 gem 'sidekiq'
-
 gem 'slim-rails'
 #awesome print rende l'output in console piú leggibile
 gem 'awesome_print'
 #figaro serve a creare env vars sicure
 gem "figaro"
-
 gem 'puma'
-
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'simple_form'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -54,7 +53,7 @@ end
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
+  gem 'quiet_assets'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
