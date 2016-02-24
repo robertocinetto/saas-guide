@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+plans = Stripe::Plan.all
+
+plans.each do |plan|
+  Plan.create stripe_id: plan.id, name: plan.name, price: plan.amount, interval: plan.interval
+end
