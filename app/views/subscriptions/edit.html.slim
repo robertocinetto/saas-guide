@@ -1,0 +1,12 @@
+h2 Choose your new plan
+= render partial: "plans"
+
+.row
+  .col-sm-8.col-sm-offset-2
+    = form_tag "/subscriptions" do
+      span.payment-errors.text-danger
+      
+      .form-group
+        = collection_select :plan, :stripe_id, @plans, :stripe_id, :name, {},  class: "form-control"
+      .form-group
+        button.btn.btn-primary type="submit"  Update Subscription

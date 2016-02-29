@@ -1,0 +1,20 @@
+- content_for :no_turbolink, true
+
+- if @account.stripe_plan_id
+  - if @account.active_until
+    | Your subscription is active until #{@account.active_until}
+  - else
+    | Your subscription expired on #{@account.active_until}
+- else
+  | You have subscribed any plan.
+
+
+br
+br
+= link_to 'Change Subscription', edit_subscription_path(@account.id), class: 'btn btn-primary'
+br
+br
+= link_to 'Cancel Subscription', subscriptions_cancel_subscription_path, class: 'btn btn-primary'
+br
+br
+= link_to 'Update Credit Card', subscriptions_update_card_path, class: 'btn btn-primary'

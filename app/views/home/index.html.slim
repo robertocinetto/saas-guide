@@ -1,5 +1,6 @@
-= link_to "Login", new_user_session_path
-= link_to "Logout", destroy_user_session_path, method: :delete
-= link_to "Sing up", new_user_registration_path
+= link_to 'Login', new_user_session_path, class: 'btn btn-default'
+= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn btn-default'
+= link_to 'Sing up', new_user_registration_path, class: 'btn btn-default'
+= link_to 'Manage Subscription', subscriptions_path, class: 'btn btn-default'
 
 h1 = @message

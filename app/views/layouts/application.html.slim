@@ -6,7 +6,7 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
-  body
+  body{ data-no-turbolink = no_turbolink? } 
     .container
       .col-sm-12
         - flash.each do |type, message|

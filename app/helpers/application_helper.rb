@@ -14,4 +14,12 @@ module ApplicationHelper
         flash_type.to_s
       end
   end
+
+  def no_turbolink?
+    if content_for(:no_turbolink)
+      "true"
+    else
+      nil
+    end
+  end
 end
